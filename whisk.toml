@@ -1,0 +1,11 @@
+[package]
+name = "whisk-rpi"
+lang = "c"
+
+src = [ "main.c" ]
+
+[target.x86_64-linux-64]
+compiler = "gcc"
+
+[target.arm-linux-32]
+compiler = "arm-linux-gnueabihf-gcc"
