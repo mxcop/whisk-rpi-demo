@@ -5,8 +5,13 @@ To get started you'll need linux *(WSL will also work on Windows)*
 
 ### Prerequisites
 
-- `whisk` buildsystem.
-- `arm-linux-gnueabihf-gcc` arm cross-compiler.
+- [`whisk`] buildsystem.
+- `arm-linux-gnueabihf-gcc` arm cross-compiler. <br>
+```sh
+$ sudo apt-get install gcc-arm-linux-gnueabihf
+```
+
+[`whisk`]: https://github.com/mxcop/whisk
 
 ### Building
 
