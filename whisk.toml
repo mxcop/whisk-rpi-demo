@@ -1,11 +1,19 @@
 [package]
 name = "whisk-rpi"
-lang = "c"
+lang = "c++"
 
-src = [ "main.c" ]
+src = [ "main.cpp" ]
 
+# 64-bit x86 Linux (for testing only)
 [target.x86_64-linux-64]
 compiler = "gcc"
 
+# 32-bit ARM Linux
 [target.arm-linux-32]
 compiler = "arm-linux-gnueabihf-gcc"
+link = "static"
+
+# 64-bit ARM Linux
+[target.aarch64-linux-64]
+compiler = "aarch64-linux-gnu-g++"
+link = "static"

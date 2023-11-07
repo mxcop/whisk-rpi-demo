@@ -1,12 +1,11 @@
 # Whisk for the RPi4
 
-This example uses `C` however you can easily change it to use `C++` instead.<br>
 To get started you'll need linux *(WSL will also work on Windows)*
 
 ### Prerequisites
 
 - [`whisk`] buildsystem.
-- `arm-linux-gnueabihf-gcc` arm cross-compiler. <br>
+- `arm-linux-gnueabihf-gcc` arm cross-compiler. (or aarch64) <br>
 ```sh
 $ sudo apt-get install gcc-arm-linux-gnueabihf
 ```
@@ -17,7 +16,7 @@ $ sudo apt-get install gcc-arm-linux-gnueabihf
 
 To build the project *(for the Pi)* simply run:
 ```sh
-$ whisk build . arm-linux-32
+$ whisk build . arm-linux-32 # or aarch64-linux-64
 ```
 
 You can also build the project for your own machine: *(as long as you're on x86 64 bit linux)*
@@ -26,6 +25,13 @@ $ whisk build
 
 $ whisk run
 ```
+
+### Debugging
+
+For debugging you'll need `gdb`, if you don't have it yet.<br>
+Install it (on Debian) using `sudo apt install gdb`.
+
+You can debug the program locally in vscode using `F5`. *(don't forget to `whisk build` first)*
 
 ### Uploading
 
